@@ -9,12 +9,12 @@ module output_handler(
     output reg [16:0]   result
     );
     
-    // Keeps track of showing first number or second
+    // Keeps track of showing first or second number
     reg next_state = 0;
     
     localparam [16:0]
 //    Declaration of descriptive words to be displayed on sseg display
-//    (descriptive words bit = MSB = result[16])
+//    (descriptive words bit = MSB = result[16] = HIGH, when you want to output a descriptive word)
         add =       17'b10010010101011100,
         sub =       17'b10001100000111100,
         mul =       17'b10110100110101011,
@@ -35,7 +35,7 @@ module output_handler(
 // 4'b1100: Nothing    
 
    
-    //    Sets output to the appropriate value, depending on the current state (from the input_handler)
+//    Sets output to the appropriate value, depending on the current state (from the input_handler)
     always @(posedge clk) begin 
 //        Reset state to show the first number
         if(reset)
@@ -43,7 +43,7 @@ module output_handler(
         if(enter_btn)
             next_state <= 1;
 
-//        Show the description of the operation IF there's an operation in progress
+//       Show the description of the operation IF there's an operation in progress
         if(operation != 0) begin
             case(operation)
                 4'b0001:

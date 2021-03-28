@@ -7,11 +7,13 @@ module operation_handler(
     output reg [4:0]    indicators,
     output reg [15:0]   result
     );
-    
+//    Flip-Flop and next state update regs
     reg [15:0] result_ff = 0, result_nxt = 0;
     
+//    Assigning output value
     assign result = result_ff;
     
+//    Reset, update logic & LED output setup
     always @(posedge clk or posedge reset) begin
         if(reset)
             result_ff <= 0;
@@ -24,7 +26,8 @@ module operation_handler(
             indicators[4]  <= begin_operation;
     end
     
-    
+//   Logic to perform operations on first and second numbers & update output respectively.
+//   (logic only updates if the input_handler signals that it's finished).
     always @(*) begin
         result_nxt = result_ff;
         if(begin_operation) begin

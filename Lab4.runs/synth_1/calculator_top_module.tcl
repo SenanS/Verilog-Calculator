@@ -19,6 +19,8 @@ proc create_report { reportName command } {
 }
 set_param xicom.use_bs_reader 1
 set_msg_config  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/add_subtract.sv'.}}  -suppress 
+set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A758A9A}}  -suppress 
+set_msg_config  -id {Labtoolstcl 44-129}  -string {{WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.}}  -suppress 
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -48,8 +50,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/Basys3_Master.xdc
-set_property used_in_implementation false [get_files X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/Basys3_Master.xdc]
+read_xdc X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc
+set_property used_in_implementation false [get_files X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

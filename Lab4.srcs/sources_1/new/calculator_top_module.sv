@@ -3,7 +3,7 @@
 
 module calculator_top_module(
     input clk, reset,
-    input[15:0] sw,
+    input[15:0] switch,
     input add_btn, sub_btn, mult_btn, enter_btn,
     output reg [6:0] LED_out,
     output reg [3:0] Anode_Activate,
@@ -11,11 +11,12 @@ module calculator_top_module(
    
     );
     
-//    Internal wiring 
+//                          INTERAL WIRING
+//    Variables to debounce the buttons 
     wire reset_btn_db, enter_btn_db, sub_btn_db, add_btn_db, mult_btn_db, complete_input;
-    wire[1:0] db_btns;
-    wire[15:0] first_num, second_num;
-    wire[15:0] output_num; 
+//    Arrays to represent input numbers and output number
+    wire[15:0] first_num, second_num, output_num; 
+//    The buffer which displays the final 16-bit output number (with the extra descriptive word bit).
     reg[16:0] buffer_num;
 
    
@@ -33,26 +34,27 @@ module calculator_top_module(
         (.clk(clk), .reset(reset_btn_db), .button(mult_btn), .button_db(mult_btn_db));
         
         
-//    Takes two inputs from switches as different variables
+//    Takes two inputs from switches and outputs them as two arrays
     input_handler number_in_module
-        (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .switch_number(sw), 
+        (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .switch_number(switch), 
         .finished(complete_input), .first_num(first_num), .second_num(second_num));
    
    
-//   Does addition, subtraction & multiplication
+//   Does the operations of addition, subtraction, multiplication & xor-ing
     operation_handler operations
         (.clk(clk), .reset(reset_btn_db), .subtract(sub_btn_db), .add(add_btn_db), .multiply(mult_btn_db), 
         .xor_btn(enter_btn_db), .begin_operation(complete_input), .first_input(first_num),.second_input(second_num), 
         .result(output_num), .indicators(LED));
 
-//    Decideds what to display on the seven segment display (based on the state from input_state)
+
+//    Decides what to display on the seven segment display (based on the state from input_state & the buttons being pressed)
     output_handler sseg_setter        
         (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
         .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
         .operation(LED[3:0]));
 
       
-//    Displaying result
+//    Displaying result on 7 segment display
     seven_seg_ctrl sseg_display
         (.clk(clk), .reset(reset_btn_db),.number(buffer_num),.LED_out(LED_out), 
         .Anode_Activate(Anode_Activate));
