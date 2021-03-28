@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Mar 28 20:24:34 2021
-# Process ID: 544
+# Start of session at: Sun Mar 28 21:07:32 2021
+# Process ID: 9340
 # Current directory: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1
 # Command line: vivado.exe -log calculator_top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top_module.tcl
 # Log file: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12036 
+INFO: Helper process launched with PID 8988 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 386.250 ; gain = 100.391
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 385.727 ; gain = 98.605
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'calculator_top_module' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:3]
@@ -43,7 +43,7 @@ INFO: [Synth 8-226] default block is never used [X:/Life/Collages/Year5-MAI/5C1/
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_ctrl' (5#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/seven_seg_ctrl.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'calculator_top_module' (6#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 442.727 ; gain = 156.867
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 441.352 ; gain = 154.230
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,10 +56,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 442.727 ; gain = 156.867
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.352 ; gain = 154.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 442.727 ; gain = 156.867
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.352 ; gain = 154.230
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -70,30 +70,30 @@ Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/import
 Finished Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_top_module_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.680 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 774.582 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 774.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 773.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 773.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 774.582 ; gain = 488.723
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 773.742 ; gain = 486.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 774.582 ; gain = 488.723
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 773.742 ; gain = 486.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 774.582 ; gain = 488.723
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 773.742 ; gain = 486.621
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:30]
 INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'input_handler'
@@ -113,7 +113,7 @@ INFO: [Synth 8-5546] ROM "LED_out" won't be mapped to RAM because it is too spar
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'one-hot' in module 'input_handler'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 774.582 ; gain = 488.723
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 773.742 ; gain = 486.621
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -211,7 +211,7 @@ Warning: Parallel synthesis criteria is not met
 DSP Report: Generating DSP operations/result_nxt0, operation Mode is: A*B.
 DSP Report: operator operations/result_nxt0 is absorbed into DSP operations/result_nxt0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 774.582 ; gain = 488.723
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 773.742 ; gain = 486.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -228,8 +228,8 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:22]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:29]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -240,13 +240,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 809.078 ; gain = 523.219
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 809.246 ; gain = 522.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 830.746 ; gain = 544.887
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 830.914 ; gain = 543.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -257,10 +257,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:22]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:23]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:28]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv:29]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -284,7 +284,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -297,7 +297,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,25 +309,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,27 +376,27 @@ Report Instance Areas:
 |10    |  subtractor_db    |debouncer_3       |    85|
 +------+-------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.562 ; gain = 548.703
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 834.562 ; gain = 216.848
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 834.562 ; gain = 548.703
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 834.738 ; gain = 215.227
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 834.738 ; gain = 547.617
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 834.562 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 834.738 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 834.562 ; gain = 561.188
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 834.562 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 834.738 ; gain = 560.930
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 834.738 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file calculator_top_module_utilization_synth.rpt -pb calculator_top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Mar 28 20:25:01 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 28 21:07:58 2021...
