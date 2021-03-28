@@ -16,7 +16,7 @@ module calculator_top_module(
     wire[1:0] db_btns;
     wire[15:0] first_num, second_num;
     wire[15:0] output_num; 
-    reg[15:0] buffer_num;
+    reg[16:0] buffer_num;
 
    
 //                          MODULE INSTANTIATION

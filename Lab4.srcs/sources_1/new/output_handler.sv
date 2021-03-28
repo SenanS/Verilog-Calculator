@@ -3,9 +3,9 @@
 
 module output_handler(
     input               clk, reset,
-    input               subtract, add, multiply, complete_input, enter_btn,
+    input               complete_input, enter_btn,
     input [15:0]        first_num, second_num, op_result,
-    output reg [15:0]   result
+    output reg [16:0]   result
     );
     
     
@@ -19,11 +19,14 @@ module output_handler(
         if(enter_btn)
             next_state <= 1;
         if(next_state)
-            result <= second_num;
+//            result <= second_num;
+            result <= { 1'b0, second_num};
         else
-            result <= first_num;
+//            result <= first_num;
+            result <= { 1'b0, first_num};
         if(complete_input)
-            result <= op_result;
+//            result <= op_result;
+            result <= { 1'b0, op_result};
     end
     
     

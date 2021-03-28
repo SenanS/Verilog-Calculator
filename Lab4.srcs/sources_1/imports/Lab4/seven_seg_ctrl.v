@@ -3,7 +3,7 @@
 module seven_seg_ctrl(
     input            clk,
     input            reset,
-    input     [15:0] number,
+    input     [16:0] number,
     output reg [6:0] LED_out,
     output reg [3:0] Anode_Activate
     );
