@@ -62,7 +62,7 @@ module seven_seg_ctrl(
     // BCD to 7seg;
     // Cathode patterns of the 7-segment LED display 
     always @(*) begin
-//        if(number[16] == 0) begin
+        if(number[16] == 0) begin
             case(LED_BCD)
                 4'b0000: LED_out = 7'b0000001; // "0"  
                 4'b0001: LED_out = 7'b1001111; // "1" 
@@ -80,11 +80,27 @@ module seven_seg_ctrl(
                 4'b1101: LED_out = ~7'b0111101; // "d"
                 4'b1110: LED_out = ~7'b1001111; // "E"
                 4'b1111: LED_out = ~7'b1000111; // "F"
-                default: LED_out = ~7'b0000001; // "0"
+                default: LED_out = ~7'b0000001; // "-"
              endcase
-//         end
-//         else
-            
+         end
+         else begin
+            case(LED_BCD)
+                4'b0000: LED_out =  7'b0000001; // "0" 
+                4'b0001: LED_out =  7'b0100100; // "5" 
+                4'b0010: LED_out = ~7'b1110111; // "A"
+                4'b0011: LED_out = ~7'b0011111; // "b"
+                4'b0100: LED_out = ~7'b1001110; // "C"
+                4'b0101: LED_out = ~7'b0111101; // "d"
+                4'b0110: LED_out = ~7'b1001111; // "E"
+                4'b0111: LED_out = ~7'b0000101; // "r"
+                4'b1000: LED_out =  7'b1000001; // "U" 
+                4'b1001: LED_out = ~7'b1111000; // "U" rotated
+                4'b1010: LED_out = ~7'b0111000; // "L" mirrored
+                4'b1011: LED_out = ~7'b0000111; // "T" rotated
+                4'b1100: LED_out = ~7'b0000000; // Nothing
+                default: LED_out = ~7'b0000001; // "-"
+             endcase
+         end
     end
     // Synchronous Logic
     // Digit Selection

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Mar 28 19:03:30 2021
+| Date         : Sun Mar 28 19:47:46 2021
 | Host         : Senans-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file calculator_top_module_control_sets_placed.rpt
 | Design       : calculator_top_module
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    12 |
-| Unused register locations in slices containing registers |    29 |
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    20 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,6 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      4 |            1 |
-|     12 |            1 |
 |    16+ |           10 |
 +--------+--------------+
 
@@ -46,11 +45,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              19 |           12 |
+| No           | No                    | No                     |              32 |           17 |
 | No           | No                    | Yes                    |              31 |           10 |
-| No           | Yes                   | No                     |              12 |            6 |
+| No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |             105 |           30 |
-| Yes          | No                    | Yes                    |              52 |           17 |
+| Yes          | No                    | Yes                    |              52 |           16 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -61,18 +60,17 @@ Table of Contents
 +----------------+--------------------------------------------------+-----------------------+------------------+----------------+
 |  Clock Signal  |                   Enable Signal                  |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
 +----------------+--------------------------------------------------+-----------------------+------------------+----------------+
-|  clk_IBUF_BUFG | number_in_module/FSM_onehot_state_ff[3]_i_1_n_0  | reset_db/reset_btn_db |                2 |              4 |
-|  clk_IBUF_BUFG |                                                  | operations/result1    |                6 |             12 |
-|  clk_IBUF_BUFG | number_in_module/second_nxt                      | reset_db/reset_btn_db |                6 |             16 |
-|  clk_IBUF_BUFG | number_in_module/FSM_onehot_state_ff_reg_n_0_[0] | reset_db/reset_btn_db |                5 |             16 |
+|  clk_IBUF_BUFG | number_in_module/FSM_onehot_state_ff[3]_i_1_n_0  | reset_db/reset_btn_db |                3 |              4 |
+|  clk_IBUF_BUFG | number_in_module/FSM_onehot_state_ff_reg_n_0_[0] | reset_db/reset_btn_db |                4 |             16 |
 |  clk_IBUF_BUFG | number_in_module/E[0]                            | reset_db/reset_btn_db |                4 |             16 |
-|  clk_IBUF_BUFG |                                                  |                       |               12 |             19 |
-|  clk_IBUF_BUFG | subtractor_db/count[0]_i_1_n_0                   |                       |                6 |             21 |
-|  clk_IBUF_BUFG | adder_db/count[0]_i_1__0_n_0                     |                       |                6 |             21 |
-|  clk_IBUF_BUFG | enter_db/count[0]_i_1__1_n_0                     |                       |                6 |             21 |
-|  clk_IBUF_BUFG | mult_db/count[0]_i_1__3_n_0                      |                       |                6 |             21 |
-|  clk_IBUF_BUFG | reset_db/count[0]_i_1__2_n_0                     |                       |                6 |             21 |
+|  clk_IBUF_BUFG | number_in_module/second_nxt                      | reset_db/reset_btn_db |                5 |             16 |
+|  clk_IBUF_BUFG | adder_db/count_reg[0]_i_1__0_n_0                 |                       |                6 |             21 |
+|  clk_IBUF_BUFG | enter_db/count_reg[0]_i_1__1_n_0                 |                       |                6 |             21 |
+|  clk_IBUF_BUFG | mult_db/count_reg[0]_i_1__3_n_0                  |                       |                6 |             21 |
+|  clk_IBUF_BUFG | reset_db/count_reg[0]_i_1__2_n_0                 |                       |                6 |             21 |
+|  clk_IBUF_BUFG | subtractor_db/count_reg[0]_i_1_n_0               |                       |                6 |             21 |
 |  clk_IBUF_BUFG |                                                  | reset_db/reset_btn_db |               10 |             31 |
+|  clk_IBUF_BUFG |                                                  |                       |               17 |             32 |
 +----------------+--------------------------------------------------+-----------------------+------------------+----------------+
 
 
