@@ -4,7 +4,7 @@ module operation_handler(
     input               clk, reset,
     input               subtract, add, multiply, xor_btn, begin_operation,
     input [15:0]        first_input, second_input,
-    output reg [3:0]    indicators,
+    output reg [4:0]    indicators,
     output reg [15:0]   result
     );
     
@@ -20,7 +20,8 @@ module operation_handler(
             indicators[0]  <= add; 
             indicators[1]  <= multiply; 
             indicators[2]  <= subtract; 
-            indicators[3]  <= begin_operation;
+            indicators[3]  <= xor_btn;
+            indicators[4]  <= begin_operation;
     end
     
     

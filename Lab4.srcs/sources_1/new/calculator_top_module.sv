@@ -7,7 +7,7 @@ module calculator_top_module(
     input add_btn, sub_btn, mult_btn, enter_btn,
     output reg [6:0] LED_out,
     output reg [3:0] Anode_Activate,
-    output reg [3:0] LED
+    output reg [4:0] LED
    
     );
     
@@ -48,7 +48,8 @@ module calculator_top_module(
 //    Decideds what to display on the seven segment display (based on the state from input_state)
     output_handler sseg_setter        
         (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
-        .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num));
+        .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
+        .operation(LED[3:0]));
 
       
 //    Displaying result
