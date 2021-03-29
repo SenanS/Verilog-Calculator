@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon Mar 29 21:10:26 2021
+| Date             : Mon Mar 29 21:54:21 2021
 | Host             : Senans-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file calculator_top_module_power_routed.rpt -pb calculator_top_module_power_summary_routed.pb -rpx calculator_top_module_power_routed.rpx
 | Design           : calculator_top_module
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.080        |
+| Total On-Chip Power (W)  | 0.081        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.009        |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      588 |       --- |             --- |
-|   LUT as Logic |     0.002 |      269 |     20800 |            1.29 |
-|   CARRY4       |    <0.001 |       43 |      8150 |            0.53 |
+| Slice Logic    |     0.002 |      589 |       --- |             --- |
+|   LUT as Logic |     0.002 |      267 |     20800 |            1.28 |
+|   CARRY4       |    <0.001 |       45 |      8150 |            0.55 |
 |   Register     |    <0.001 |      221 |     41600 |            0.53 |
 |   F7/F8 Muxes  |    <0.001 |        5 |     32600 |            0.02 |
-|   Others       |     0.000 |       19 |       --- |             --- |
-| Signals        |     0.001 |      432 |       --- |             --- |
+|   Others       |     0.000 |       20 |       --- |             --- |
+| Signals        |     0.001 |      426 |       --- |             --- |
 | DSPs           |    <0.001 |        1 |        90 |            1.11 |
 | I/O            |     0.003 |       38 |       106 |           35.85 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.080 |          |           |                 |
+| Total          |     0.081 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 

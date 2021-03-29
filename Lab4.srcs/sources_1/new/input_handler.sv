@@ -66,10 +66,10 @@ module input_handler(
             state_2: begin
                 stuck_on_nxt = 1;
                 finished_nxt = 0;
-                if(first_nxt != 0 && switch_number == 0)
+                if(first_nxt != switch_number)
                     state_nxt = state_3;
-                else if (first_nxt == 0 && switch_number != 0)
-                    state_nxt = state_3;
+//                else if (first_nxt == 0 && switch_number != 0)
+//                    state_nxt = state_3;
             end
 //            3. Enter second num 
             state_3: begin

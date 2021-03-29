@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_msg_config  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/add_subtract.sv'.}}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A758A9A}}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-129}  -string {{WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.}}  -suppress 

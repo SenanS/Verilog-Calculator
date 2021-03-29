@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Mar 29 21:10:26 2021
+| Date         : Mon Mar 29 21:54:21 2021
 | Host         : Senans-PC running 64-bit major release  (build 9200)
 | Command      : report_methodology -file calculator_top_module_methodology_drc_routed.rpt -pb calculator_top_module_methodology_drc_routed.pb -rpx calculator_top_module_methodology_drc_routed.rpx
 | Design       : calculator_top_module
@@ -23,11 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 69
+             Violations found: 70
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | DPIR-1    | Warning  | Asynchronous driver check     | 32         |
+| SYNTH-13  | Warning  | combinational multiplier      | 1          |
 | TIMING-18 | Warning  | Missing input or output delay | 37         |
 +-----------+----------+-------------------------------+------------+
 
@@ -191,6 +192,11 @@ Related violations: <none>
 DPIR-1#32 Warning
 Asynchronous driver check  
 DSP operations/result_nxt0 input pin operations/result_nxt0/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+SYNTH-13#1 Warning
+combinational multiplier  
+Detected combinational multiplier in DSP instance operations/result_nxt0.
 Related violations: <none>
 
 TIMING-18#1 Warning
