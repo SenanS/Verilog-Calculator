@@ -100,6 +100,9 @@ module seven_seg_ctrl(
                 4'b1010: LED_out = ~7'b0111000; // "L" mirrored
                 4'b1011: LED_out = ~7'b0000111; // "T" rotated
                 4'b1100: LED_out = ~7'b0000000; // Nothing
+                4'b1101: LED_out = ~7'b0010101; // "n"
+                4'b1110: LED_out = ~7'b0010111; // "h"
+                4'b1111: LED_out = ~7'b1111011; // "g"
                 default: LED_out = ~7'b0000001; // "-"
              endcase
          end

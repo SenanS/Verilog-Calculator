@@ -13,7 +13,7 @@ module calculator_top_module(
     
 //                          INTERAL WIRING
 //    Variables to debounce the buttons 
-    wire reset_btn_db, enter_btn_db, sub_btn_db, add_btn_db, mult_btn_db, complete_input;
+    wire reset_btn_db, enter_btn_db, sub_btn_db, add_btn_db, mult_btn_db, complete_input, stuck_on_input;
 //    Arrays to represent input numbers and output number
     wire[15:0] first_num, second_num, output_num; 
 //    The buffer which displays the final 16-bit output number (with the extra descriptive word bit).
@@ -37,7 +37,8 @@ module calculator_top_module(
 //    Takes two inputs from switches and outputs them as two arrays
     input_handler number_in_module
         (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .switch_number(switch), 
-        .finished(complete_input), .first_num(first_num), .second_num(second_num));
+        .finished(complete_input), .first_num(first_num), .second_num(second_num),
+        .stuck_on_input(stuck_on_input));
    
    
 //   Does the operations of addition, subtraction, multiplication & xor-ing
@@ -51,7 +52,7 @@ module calculator_top_module(
     output_handler sseg_setter        
         (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
         .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
-        .operation(LED[3:0]));
+        .operation(LED[3:0]), .stuck_on_input(stuck_on_input));
 
       
 //    Displaying result on 7 segment display

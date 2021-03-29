@@ -3,7 +3,7 @@
 module input_handler(
     input               clk, reset, enter_btn,
     input [15:0]        switch_number,
-    output reg          finished,
+    output reg          finished, stuck_on_input,
     output reg [15:0]   first_num, second_num
     );
     
@@ -21,9 +21,10 @@ module input_handler(
 //    Declaration of flip flops and next state variables for the state, the completed bit, the first & second inputs
     reg [15:0] first_ff = 0, second_ff = 0, first_nxt = 0, second_nxt = 0;
     reg [1:0] state_ff = 0, state_nxt = 0; 
-    reg finished_ff = 0, finished_nxt = 0;
+    reg finished_ff = 0, finished_nxt = 0, stuck_on_ff = 0, stuck_on_nxt = 0;
     
 //    Assigning outputs 
+    assign stuck_on_input = stuck_on_ff;
     assign finished = finished_ff;
     assign first_num = first_ff;
     assign second_num = second_ff;
@@ -35,11 +36,13 @@ module input_handler(
             state_ff <= state_1;
             first_ff <= 0;
             second_ff <= 0;
+            stuck_on_ff <= 0;
         end else begin
             state_ff <= state_nxt;
             finished_ff <= finished_nxt;
             first_ff <= first_nxt;
             second_ff <= second_nxt;
+            stuck_on_ff <= stuck_on_nxt;
         end
     end
     
@@ -48,6 +51,7 @@ module input_handler(
         state_nxt = state_ff;
         second_nxt = second_ff;
         first_nxt = first_ff;
+        stuck_on_nxt = stuck_on_ff;
         
         case(state_ff)
 //            1. Enter first num 
@@ -56,9 +60,11 @@ module input_handler(
                     state_nxt = state_2;
                 first_nxt = switch_number;
                 finished_nxt = 0;
-//            2. Wait for first number to be cleared
+                stuck_on_nxt = 0;
             end
+//            2. Wait for first number to be cleared
             state_2: begin
+                stuck_on_nxt = 1;
                 finished_nxt = 0;
                 if(first_nxt != 0 && switch_number == 0)
                     state_nxt = state_3;
@@ -71,10 +77,12 @@ module input_handler(
                     state_nxt = state_4;
                 second_nxt = switch_number;
                 finished_nxt = 0;
+                stuck_on_nxt = 0;
             end
 //            4. Operation complete
             state_4: begin
                 finished_nxt = 1;
+                stuck_on_nxt = 0;
             end
         endcase
     end    

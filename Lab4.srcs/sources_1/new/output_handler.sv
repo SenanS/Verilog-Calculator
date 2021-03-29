@@ -3,7 +3,7 @@
 
 module output_handler(
     input               clk, reset,
-    input               complete_input, enter_btn,
+    input               complete_input, enter_btn, stuck_on_input,
     input [3:0]         operation,
     input [15:0]        first_num, second_num, op_result,
     output reg [16:0]   result
@@ -19,7 +19,10 @@ module output_handler(
         sub =       17'b10001100000111100,
         mul =       17'b10110100110101011,
         exor =      17'b11001010000000111,
+        done =      17'b10101000011010110,
+        Chng =      17'b10100111011011111,
         unknown =   17'b11100110011001100;
+        
 // 4'b0000: "0"          
 // 4'b0001: "5"          
 // 4'b0010: "A"          
@@ -33,6 +36,9 @@ module output_handler(
 // 4'b1010: "L" rotated 
 // 4'b1011: "T" rotated  
 // 4'b1100: Nothing    
+// 4'b1101: = "n"
+// 4'b1110: = "h"
+// 4'b1111: = "g"
 
    
 //    Sets output to the appropriate value, depending on the current state (from the input_handler)
@@ -44,34 +50,42 @@ module output_handler(
             next_state <= 1;
 
 //       Show the description of the operation IF there's an operation in progress
-        if(operation != 0) begin
-            case(operation)
-                4'b0001:
-                    result <= add;
-                4'b0010:
-                    result <= mul;
-                4'b0100:
-                    result <= sub;
-                4'b1000:
-                    result <= exor;
-                default:
-                    result <= unknown;            
-            endcase
-        end
+        if(!stuck_on_input) begin
+            if(operation != 0) begin
+                case(operation)
+                    4'b0001:
+                        result <= add;
+                    4'b0010:
+                        result <= mul;
+                    4'b0100:
+                        result <= sub;
+                    4'b1000:
+    //                    If the user isn't done entering input, then show "d0nE"
+                        if(!complete_input)
+                            result <= done;
+                        else
+                            result <= exor;
+                    default:
+                        result <= unknown;            
+                endcase
+            end
 //        Else show them the input numbers or final output
-        else begin
-            // If the user hasn't completed input, then show them the input numbers.
-            if(!complete_input)
-                if(!next_state)
-//                    Show the user the first input number
-                    result <= { 1'b0, first_num};
+            else begin
+    //            If the user hasn't completed input, then show them the input numbers.
+                if(!complete_input)
+                    if(!next_state)
+    //                    Show the user the first input number
+                        result <= { 1'b0, first_num};
+                    else
+    //                    Show the user the second input number
+                        result <= { 1'b0, second_num};
                 else
-//                    Show the user the second input number
-                    result <= { 1'b0, second_num};
-            else
-//                Show the user the operated on result.
-                result <= { 1'b0, op_result};
-        end
+    //                Show the user the operated on result.
+                    result <= { 1'b0, op_result};
+            end
+        end    
+        else
+                result <= Chng;   
     end
     
     
