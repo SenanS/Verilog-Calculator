@@ -68,16 +68,13 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  create_project -in_memory -part xc7a35tcpg236-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  set_param xicom.use_bs_reader 1
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/impl_1/calculator_top_module.dcp
   set_property webtalk.parent_dir X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.cache/wt [current_project]
   set_property parent.project_path X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.xpr [current_project]
   set_property ip_output_repo X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.dcp
-  read_xdc X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc
-  link_design -top calculator_top_module -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

@@ -172,6 +172,31 @@ set_property IOSTANDARD LVCMOS33 [get_ports enter_btn]
 #set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
 #	set_property IOSTANDARD LVCMOS33 [get_ports {JA[7]}]
 
+#Sch name = JA1
+set_property PACKAGE_PIN J1 [get_ports {row[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {row[0]}]
+#Sch name = JA2
+set_property PACKAGE_PIN L2 [get_ports {row[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {row[1]}]
+#Sch name = JA3
+set_property PACKAGE_PIN J2 [get_ports {row[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {row[2]}]
+#Sch name = JA4
+set_property PACKAGE_PIN G2 [get_ports {row[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {row[3]}]
+#Sch name = JA7
+set_property PACKAGE_PIN H1 [get_ports {col[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {col[0]}]
+#Sch name = JA8
+set_property PACKAGE_PIN K2 [get_ports {col[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {col[1]}]
+#Sch name = JA9
+set_property PACKAGE_PIN H2 [get_ports {col[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {col[2]}]
+#Sch name = JA10
+set_property PACKAGE_PIN G3 [get_ports {col[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {col[3}]
+
 
 
 ###Pmod Header JB
@@ -321,3 +346,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports enter_btn]
 
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {col[3]}]

@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_msg_config  -id {Project 1-19}  -string {{CRITICAL WARNING: [Project 1-19] Could not find the file 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/add_subtract.sv'.}}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-513}  -string {{ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A758A9A}}  -suppress 
 set_msg_config  -id {Labtoolstcl 44-129}  -string {{WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.}}  -suppress 
@@ -32,9 +33,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo x:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/input_handler.sv
-  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv
-  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/output_handler.sv
+  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_decoder.sv
   X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv
 }
 read_verilog -library xil_defaultlib {

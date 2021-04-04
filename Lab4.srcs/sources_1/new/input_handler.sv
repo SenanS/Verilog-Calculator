@@ -2,7 +2,7 @@
 
 module input_handler(
     input               clk, reset, enter_btn,
-    input [15:0]        switch_number,
+    input [15:0]        input_number,
     output reg          finished, stuck_on_input,
     output reg [15:0]   first_num, second_num
     );
@@ -58,7 +58,7 @@ module input_handler(
             state_1: begin
                 if(enter_btn)
                     state_nxt = state_2;
-                first_nxt = switch_number;
+                first_nxt = input_number;
                 finished_nxt = 0;
                 stuck_on_nxt = 0;
             end
@@ -66,16 +66,14 @@ module input_handler(
             state_2: begin
                 stuck_on_nxt = 1;
                 finished_nxt = 0;
-                if(first_nxt != switch_number)
+                if(first_nxt != input_number)
                     state_nxt = state_3;
-//                else if (first_nxt == 0 && switch_number != 0)
-//                    state_nxt = state_3;
             end
 //            3. Enter second num 
             state_3: begin
                 if(enter_btn) 
                     state_nxt = state_4;
-                second_nxt = switch_number;
+                second_nxt = input_number;
                 finished_nxt = 0;
                 stuck_on_nxt = 0;
             end
