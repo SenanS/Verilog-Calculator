@@ -55,7 +55,7 @@ module calculator_top_module(
 //   Does the operations of addition, subtraction, multiplication & xor-ing
     operation_handler operations
         (.clk(clk), .reset(reset_btn_db), .subtract(sub_btn_db), .add(add_btn_db), .multiply(mult_btn_db), 
-        .xor_btn(enter_btn_db), .begin_operation(complete_input), .first_input(first_num),.second_input(second_num), 
+        .xor_btn(enter_btn_db), .begin_operation(complete_input), .first_input(first_num), .second_input(second_num), 
         .result(output_num), .indicators(LED));
 
 

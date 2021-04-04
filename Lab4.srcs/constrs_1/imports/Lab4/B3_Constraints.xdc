@@ -195,7 +195,7 @@ set_property PACKAGE_PIN H2 [get_ports {col[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {col[2]}]
 #Sch name = JA10
 set_property PACKAGE_PIN G3 [get_ports {col[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {col[3}]
+set_property IOSTANDARD LVCMOS33 [get_ports {col[3]}]
 
 
 

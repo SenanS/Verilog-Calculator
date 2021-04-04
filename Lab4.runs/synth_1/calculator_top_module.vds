@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Apr  4 15:23:23 2021
-# Process ID: 17260
+# Start of session at: Sun Apr  4 23:57:05 2021
+# Process ID: 1580
 # Current directory: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1
 # Command line: vivado.exe -log calculator_top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top_module.tcl
 # Log file: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10644 
+INFO: Helper process launched with PID 20076 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 386.270 ; gain = 100.293
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 385.523 ; gain = 99.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'calculator_top_module' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:3]
@@ -41,24 +41,8 @@ INFO: [Synth 8-6157] synthesizing module 'keypad_input_handler' [X:/Life/Collage
 	Parameter sub_state_6 bound to: 8'b00100000 
 	Parameter sub_state_7 bound to: 8'b01000000 
 	Parameter sub_state_8 bound to: 8'b10000000 
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:99]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:108]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:112]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:119]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:123]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:130]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:134]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:139]
-INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:96]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:147]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:156]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:160]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:167]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:171]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:178]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:182]
-WARNING: [Synth 8-6090] variable 'sub_state_nxt' is written by both blocking and non-blocking assignments, entire logic could be removed [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:187]
-INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:144]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:98]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:147]
 INFO: [Synth 8-6155] done synthesizing module 'keypad_input_handler' (3#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'operation_handler' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'operation_handler' (4#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv:3]
@@ -75,7 +59,6 @@ INFO: [Synth 8-6157] synthesizing module 'seven_seg_ctrl' [X:/Life/Collages/Year
 INFO: [Synth 8-226] default block is never used [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/seven_seg_ctrl.v:28]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_ctrl' (6#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/seven_seg_ctrl.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'calculator_top_module' (7#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
-WARNING: [Synth 8-3331] design keypad_input_handler has unconnected port enter_btn
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[15]
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[14]
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[13]
@@ -93,7 +76,7 @@ WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[1]
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 442.066 ; gain = 156.090
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -106,10 +89,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 442.066 ; gain = 156.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 442.066 ; gain = 156.090
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -117,36 +100,33 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
-WARNING: [Vivado 12-584] No ports matched 'col[3'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:198]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:198]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_top_module_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.379 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.426 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.090 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 776.090 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 776.426 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:30]
 INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'keypad_decoder'
@@ -156,7 +136,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'main_state_ff_reg' in modul
 INFO: [Synth 8-5546] ROM "main_state_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "first_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "stuck_on_nxt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "finished_nxt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "finished_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "result" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "LED_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "LED_out" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
@@ -176,9 +157,8 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encodi
             main_state_3 |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'main_state_ff_reg' using encoding 'one-hot' in module 'keypad_input_handler'
-WARNING: [Synth 8-327] inferring latch for variable 'finished_nxt_reg' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:101]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -203,17 +183,19 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 18    
 +---Muxes : 
-	   7 Input     17 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
 	   9 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 5     
+	   9 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	  18 Input      7 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 12    
 	   9 Input      1 Bit        Muxes := 5     
-	   3 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -244,8 +226,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   9 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 5     
-	   3 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 5     
 Module operation_handler 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -265,9 +249,10 @@ Detailed RTL Component Info :
 	               17 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   7 Input     17 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
+	   6 Input     17 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 Module seven_seg_ctrl 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -289,7 +274,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "keypad_number_creation/finished_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "keypad_number_creation/stuck_on_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "keypad_number_creation/first_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "keypad_number_creation/main_state_nxt" won't be mapped to RAM because it is too sparse
@@ -311,41 +295,8 @@ WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[2]
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[1]
 WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[0]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/sub_state_ff_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\keypad_number_creation/sub_state_ff_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\keypad_number_creation/finished_nxt_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\operations/result_ff_reg[14] )
-INFO: [Synth 8-3886] merging instance 'operations/indicators_reg[4]' (FD) to 'sseg_output_handler/result_reg[9]'
-INFO: [Synth 8-3886] merging instance 'sseg_output_handler/result_reg[8]' (FD) to 'sseg_output_handler/result_reg[13]'
-INFO: [Synth 8-3886] merging instance 'sseg_output_handler/result_reg[7]' (FD) to 'sseg_output_handler/result_reg[14]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sseg_output_handler/result_reg[9] )
-WARNING: [Synth 8-3332] Sequential element (keypad_number_creation/FSM_onehot_main_state_ff_reg[2]) is unused and will be removed from module calculator_top_module.
-WARNING: [Synth 8-3332] Sequential element (keypad_number_creation/FSM_onehot_main_state_ff_reg[1]) is unused and will be removed from module calculator_top_module.
-WARNING: [Synth 8-3332] Sequential element (keypad_number_creation/FSM_onehot_main_state_ff_reg[0]) is unused and will be removed from module calculator_top_module.
-WARNING: [Synth 8-3332] Sequential element (keypad_number_creation/finished_nxt_reg) is unused and will be removed from module calculator_top_module.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 776.426 ; gain = 490.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -362,6 +313,8 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:55]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:56]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -372,13 +325,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 776.090 ; gain = 490.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 811.801 ; gain = 525.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 794.629 ; gain = 508.652
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 839.738 ; gain = 553.602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -389,8 +342,10 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:55]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:56]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -414,7 +369,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -427,7 +382,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -439,25 +394,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -470,61 +425,64 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |    35|
-|3     |LUT1   |     2|
-|4     |LUT2   |   109|
-|5     |LUT3   |     1|
-|6     |LUT4   |    27|
-|7     |LUT5   |    22|
-|8     |LUT6   |    52|
-|9     |FDCE   |    44|
-|10    |FDRE   |   129|
-|11    |IBUF   |    10|
-|12    |OBUF   |    20|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    43|
+|3     |DSP48E1 |     1|
+|4     |LUT1    |     2|
+|5     |LUT2    |   150|
+|6     |LUT3    |     6|
+|7     |LUT4    |    43|
+|8     |LUT5    |    75|
+|9     |LUT6    |    76|
+|10    |MUXF7   |     5|
+|11    |FDCE    |    99|
+|12    |FDPE    |     2|
+|13    |FDRE    |   133|
+|14    |IBUF    |    10|
+|15    |OBUF    |    20|
++------+--------+------+
 
 Report Instance Areas: 
 +------+-------------------------+---------------------+------+
 |      |Instance                 |Module               |Cells |
 +------+-------------------------+---------------------+------+
-|1     |top                      |                     |   452|
-|2     |  adder_db               |debouncer            |    64|
-|3     |  enter_db               |debouncer_0          |    64|
+|1     |top                      |                     |   666|
+|2     |  adder_db               |debouncer            |    66|
+|3     |  enter_db               |debouncer_0          |    66|
 |4     |  keypad_input           |keypad_decoder       |    21|
-|5     |  keypad_number_creation |keypad_input_handler |     4|
-|6     |  mult_db                |debouncer_1          |    64|
-|7     |  operations             |operation_handler    |     4|
-|8     |  reset_db               |debouncer_2          |    65|
+|5     |  keypad_number_creation |keypad_input_handler |   146|
+|6     |  mult_db                |debouncer_1          |    66|
+|7     |  operations             |operation_handler    |    59|
+|8     |  reset_db               |debouncer_2          |    67|
 |9     |  sseg_display           |seven_seg_ctrl       |    30|
-|10    |  sseg_output_handler    |output_handler       |    41|
-|11    |  subtractor_db          |debouncer_3          |    64|
+|10    |  sseg_output_handler    |output_handler       |    29|
+|11    |  subtractor_db          |debouncer_3          |    85|
 +------+-------------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 795.824 ; gain = 175.824
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 795.824 ; gain = 509.848
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 844.488 ; gain = 223.383
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 795.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 55 Warnings, 1 Critical Warnings and 0 Errors encountered.
+50 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 795.824 ; gain = 522.887
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 795.824 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 844.488 ; gain = 570.996
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.488 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file calculator_top_module_utilization_synth.rpt -pb calculator_top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr  4 15:23:46 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  4 23:57:33 2021...

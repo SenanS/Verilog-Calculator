@@ -86,13 +86,14 @@ module keypad_input_handler(
     always @(*) begin
 //    Set the number based on the state        
         main_state_nxt = main_state_ff;
-        sub_state_nxt <= sub_state_ff;
+        sub_state_nxt = sub_state_ff;
         second_nxt = second_ff;
         first_nxt = first_ff;
         stuck_on_nxt = stuck_on_ff;
-        
+        finished_nxt = finished_ff;
         case(main_state_ff)
             main_state_1: begin
+                finished_nxt = 0;
                 case(sub_state_ff)
                     sub_state_1: begin
                         if(enter_btn)
@@ -141,12 +142,12 @@ module keypad_input_handler(
                 endcase
             end
             main_state_2: begin
+                finished_nxt = 0;
                 case(sub_state_ff)
                     sub_state_1: begin
                         if(enter_btn)
                             sub_state_nxt = sub_state_2;
                         second_nxt[3:0] = input_number;
-                        finished_nxt = 0;
                         stuck_on_nxt = 0;
                     end
                     sub_state_2: begin

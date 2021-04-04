@@ -61,9 +61,10 @@ module output_handler(
                         result <= sub;
                     4'b1000:
     //                    If the user isn't done entering input, then show "d0nE"
-                        if(!complete_input)
-                            result <= done;
-                        else
+                        if(complete_input)
+//                        if(!complete_input)
+//                            result <= done;
+//                        else
                             result <= exor;
                     default:
                         result <= unknown;            
@@ -84,8 +85,8 @@ module output_handler(
                     result <= { 1'b0, op_result};
             end
         end    
-        else
-                result <= Chng;   
+//        else
+//                result <= Chng;   
     end
     
     
