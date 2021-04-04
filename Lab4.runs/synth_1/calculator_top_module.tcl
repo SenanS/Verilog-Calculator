@@ -34,6 +34,9 @@ set_property ip_output_repo x:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
   X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_decoder.sv
+  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv
+  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv
+  X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/output_handler.sv
   X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv
 }
 read_verilog -library xil_defaultlib {

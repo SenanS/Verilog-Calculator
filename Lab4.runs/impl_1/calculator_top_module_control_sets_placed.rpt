@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Apr  2 21:44:13 2021
+| Date         : Sun Apr  4 15:24:14 2021
 | Host         : Senans-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file calculator_top_module_control_sets_placed.rpt
 | Design       : calculator_top_module
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    18 |
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    23 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,9 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            1 |
 |      4 |            1 |
-|    16+ |            2 |
+|      8 |            1 |
+|    16+ |            7 |
 +--------+--------------+
 
 
@@ -46,10 +46,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
-| No           | No                    | Yes                    |              28 |            7 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              21 |            6 |
+| No           | No                    | No                     |              20 |           11 |
+| No           | No                    | Yes                    |              40 |           13 |
+| No           | Yes                   | No                     |               8 |            1 |
+| Yes          | No                    | No                     |             105 |           30 |
 | Yes          | No                    | Yes                    |               4 |            1 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -58,13 +58,18 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------------+-----------------------+------------------+----------------+
-|  Clock Signal  |                Enable Signal               |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------------------+-----------------------+------------------+----------------+
-|  clk_IBUF_BUFG |                                            |                       |                1 |              1 |
-|  clk_IBUF_BUFG | keypad_input/number_nxt_inferred__0/i__n_0 | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | reset_db/count[0]_i_1_n_0                  |                       |                6 |             21 |
-|  clk_IBUF_BUFG |                                            | reset_db/reset_btn_db |                7 |             28 |
-+----------------+--------------------------------------------+-----------------------+------------------+----------------+
++----------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|  Clock Signal  |                Enable Signal               |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------------+----------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | keypad_input/number_nxt_inferred__0/i__n_0 | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG |                                            | sseg_output_handler/result[15]_i_1_n_0 |                1 |              8 |
+|  clk_IBUF_BUFG |                                            |                                        |               11 |             20 |
+|  clk_IBUF_BUFG | subtractor_db/count[0]_i_1_n_0             |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | adder_db/count[0]_i_1__0_n_0               |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | enter_db/count[0]_i_1__1_n_0               |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | mult_db/count[0]_i_1__3_n_0                |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | reset_db/count[0]_i_1__2_n_0               |                                        |                6 |             21 |
+|  clk_IBUF_BUFG |                                            | reset_db/reset_btn_db                  |               13 |             40 |
++----------------+--------------------------------------------+----------------------------------------+------------------+----------------+
 
 

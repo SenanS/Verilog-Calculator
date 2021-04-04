@@ -44,7 +44,9 @@ module keypad_decoder(
 //            1. Read first row
             state_1: begin
                 state_nxt = state_2;
+//                row_nxt = 4'b1110;
                 row_nxt = 4'b0001;
+//                if(cols[0] == 1)
                 if(cols[0] == 0)
                     number_nxt = 4'b0001;
                 else if(cols[1] == 0)
@@ -57,7 +59,10 @@ module keypad_decoder(
 //            2. Read second row
             state_2: begin
                 state_nxt = state_3;
+//                row_nxt = 4'b1101;
                 row_nxt = 4'b0010;
+//                if(cols[0] == 1)
+
                 if(cols[0] == 0)
                     number_nxt = 4'b0100;
                 else if(cols[1] == 0)
@@ -71,6 +76,8 @@ module keypad_decoder(
             state_3: begin
                 state_nxt = state_4;
                 row_nxt = 4'b0100;
+//                row_nxt = 4'b1011;
+//                if(cols[0] == 1)
                 if(cols[0] == 0)
                     number_nxt = 4'b0111;
                 else if(cols[1] == 0)
@@ -83,7 +90,9 @@ module keypad_decoder(
 //            4. Read fourth row
             state_4: begin
                 state_nxt = state_1;
+//                row_nxt = 4'b0111;
                 row_nxt = 4'b1000;
+//                if(cols[0] == 1)
                 if(cols[0] == 0)
                     number_nxt = 4'b1111;
                 else if(cols[1] == 0)

@@ -40,28 +40,33 @@ module calculator_top_module(
     keypad_decoder keypad_input
         (.clk(clk), .reset(reset_btn_db), .rows(row), .cols(col), .final_number(keypad_num));
         
-////    Takes two inputs from switches and outputs them as two arrays
+    keypad_input_handler keypad_number_creation
+        (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .input_number(keypad_num),
+        .finished(complete_input), .first_num(first_num), .second_num(second_num),        
+        .stuck_on_input(stuck_on_input));      
+                                               
+//Takes two inputs from switches and outputs them as two arrays
 //    input_handler number_in_module
 //        (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .input_number(switch), 
 //        .finished(complete_input), .first_num(first_num), .second_num(second_num),
 //        .stuck_on_input(stuck_on_input));
    
    
-////   Does the operations of addition, subtraction, multiplication & xor-ing
-//    operation_handler operations
-//        (.clk(clk), .reset(reset_btn_db), .subtract(sub_btn_db), .add(add_btn_db), .multiply(mult_btn_db), 
-//        .xor_btn(enter_btn_db), .begin_operation(complete_input), .first_input(first_num),.second_input(second_num), 
-//        .result(output_num), .indicators(LED));
+//   Does the operations of addition, subtraction, multiplication & xor-ing
+    operation_handler operations
+        (.clk(clk), .reset(reset_btn_db), .subtract(sub_btn_db), .add(add_btn_db), .multiply(mult_btn_db), 
+        .xor_btn(enter_btn_db), .begin_operation(complete_input), .first_input(first_num),.second_input(second_num), 
+        .result(output_num), .indicators(LED));
 
 
-////    Decides what to display on the seven segment display (based on the state from input_state & the buttons being pressed)
-//    output_handler sseg_setter        
-//        (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
-//        .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
-//        .operation(LED[3:0]), .stuck_on_input(stuck_on_input));
+//    Decides what to display on the seven segment display (based on the state from input_state & the buttons being pressed)
+    output_handler sseg_output_handler        
+        (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
+        .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
+        .operation(LED[3:0]), .stuck_on_input(stuck_on_input));
         
         
-    assign buffer_num = {{1'b0}, {4{keypad_num}}};
+//    assign buffer_num = {{1'b0}, {4{keypad_num}}};
           
 //    Displaying result on 7 segment display
     seven_seg_ctrl sseg_display
