@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Apr  4 23:57:05 2021
-# Process ID: 1580
+# Start of session at: Mon Apr  5 00:10:57 2021
+# Process ID: 8144
 # Current directory: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1
 # Command line: vivado.exe -log calculator_top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top_module.tcl
 # Log file: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20076 
+INFO: Helper process launched with PID 17252 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 385.523 ; gain = 99.387
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 386.129 ; gain = 100.438
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'calculator_top_module' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:3]
@@ -41,8 +41,8 @@ INFO: [Synth 8-6157] synthesizing module 'keypad_input_handler' [X:/Life/Collage
 	Parameter sub_state_6 bound to: 8'b00100000 
 	Parameter sub_state_7 bound to: 8'b01000000 
 	Parameter sub_state_8 bound to: 8'b10000000 
-INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:98]
-INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:147]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:101]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:152]
 INFO: [Synth 8-6155] done synthesizing module 'keypad_input_handler' (3#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'operation_handler' [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'operation_handler' (4#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/operation_handler.sv:3]
@@ -59,24 +59,9 @@ INFO: [Synth 8-6157] synthesizing module 'seven_seg_ctrl' [X:/Life/Collages/Year
 INFO: [Synth 8-226] default block is never used [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/seven_seg_ctrl.v:28]
 INFO: [Synth 8-6155] done synthesizing module 'seven_seg_ctrl' (6#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/seven_seg_ctrl.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'calculator_top_module' (7#1) [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/calculator_top_module.sv:4]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[15]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[14]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[13]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[12]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[11]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[10]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[9]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[8]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[7]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[6]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[5]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[4]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[3]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[2]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[1]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[0]
+WARNING: [Synth 8-3331] design output_handler has unconnected port enter_btn
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 441.941 ; gain = 156.250
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,10 +74,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.941 ; gain = 156.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.457 ; gain = 155.320
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 441.941 ; gain = 156.250
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -100,43 +85,141 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
+WARNING: [Vivado 12-584] No ports matched 'switch[0]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[0]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[1]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[1]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[2]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[2]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[3]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[3]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[4]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[4]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[5]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[5]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[6]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[6]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[7]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[7]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[8]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[8]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[9]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[9]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[10]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[10]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[11]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[11]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[12]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[12]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[13]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[13]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[14]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[14]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[15]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switch[15]'. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/constrs_1/imports/Lab4/B3_Constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_top_module_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_top_module_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.379 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 777.312 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 777.363 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 776.426 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 776.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 777.363 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 777.363 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 777.363 ; gain = 491.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 777.363 ; gain = 491.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 777.363 ; gain = 491.672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/imports/Lab4/debouncer.v:30]
 INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'keypad_decoder'
 INFO: [Synth 8-5544] ROM "row_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'main_state_ff_reg' in module 'keypad_input_handler'
+INFO: [Synth 8-802] inferred FSM for state register 'sub_state_ff_reg' in module 'keypad_input_handler'
+INFO: [Synth 8-5544] ROM "finished_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "main_state_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "first_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "stuck_on_nxt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "finished_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "second_bool_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "result" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "LED_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "LED_out" won't be mapped to RAM because it is too sparse
@@ -152,13 +235,27 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encodi
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
+*
+             sub_state_1 |                         00000001 |                         00000001
+             sub_state_2 |                         00000010 |                         00000010
+             sub_state_3 |                         00000100 |                         00000100
+             sub_state_4 |                         00001000 |                         00001000
+             sub_state_5 |                         00010000 |                         00010000
+             sub_state_6 |                         00100000 |                         00100000
+             sub_state_7 |                         01000000 |                         01000000
+             sub_state_8 |                         10000000 |                         10000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'sub_state_ff_reg' in module 'keypad_input_handler'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
             main_state_1 |                              001 |                               00
             main_state_2 |                              010 |                               01
             main_state_3 |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'main_state_ff_reg' using encoding 'one-hot' in module 'keypad_input_handler'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 776.426 ; gain = 490.289
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 777.363 ; gain = 491.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,17 +275,15 @@ Detailed RTL Component Info :
 +---Registers : 
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 3     
-	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 18    
+	                1 Bit    Registers := 19    
 +---Muxes : 
 	   6 Input     17 Bit        Muxes := 1     
 	   9 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 5     
-	   9 Input      8 Bit        Muxes := 2     
-	   3 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
 	  18 Input      7 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 8     
 	   4 Input      2 Bit        Muxes := 1     
@@ -221,13 +316,11 @@ Module keypad_input_handler
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
 +---Muxes : 
 	   9 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
-	   9 Input      8 Bit        Muxes := 2     
-	   3 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 5     
 	   3 Input      1 Bit        Muxes := 5     
 Module operation_handler 
@@ -274,29 +367,11 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "keypad_number_creation/stuck_on_nxt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "keypad_number_creation/first_nxt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "keypad_number_creation/main_state_nxt" won't be mapped to RAM because it is too sparse
 DSP Report: Generating DSP operations/result_nxt0, operation Mode is: A*B.
 DSP Report: operator operations/result_nxt0 is absorbed into DSP operations/result_nxt0.
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[15]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[14]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[13]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[12]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[11]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[10]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[9]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[8]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[7]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[6]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[5]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[4]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[3]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[2]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[1]
-WARNING: [Synth 8-3331] design calculator_top_module has unconnected port switch[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 776.426 ; gain = 490.289
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 777.363 ; gain = 491.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -325,13 +400,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 811.801 ; gain = 525.664
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 815.242 ; gain = 529.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 839.738 ; gain = 553.602
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 837.863 ; gain = 552.172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,7 +420,7 @@ Start Technology Mapping
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:55]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.srcs/sources_1/new/keypad_input_handler.sv:56]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -369,7 +444,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -382,7 +457,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -394,25 +469,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -432,57 +507,58 @@ Report Cell Usage:
 |2     |CARRY4  |    43|
 |3     |DSP48E1 |     1|
 |4     |LUT1    |     2|
-|5     |LUT2    |   150|
+|5     |LUT2    |   147|
 |6     |LUT3    |     6|
 |7     |LUT4    |    43|
-|8     |LUT5    |    75|
-|9     |LUT6    |    76|
+|8     |LUT5    |    64|
+|9     |LUT6    |    70|
 |10    |MUXF7   |     5|
-|11    |FDCE    |    99|
+|11    |FDCE    |   100|
 |12    |FDPE    |     2|
-|13    |FDRE    |   133|
-|14    |IBUF    |    10|
-|15    |OBUF    |    20|
+|13    |FDRE    |   128|
+|14    |FDSE    |     5|
+|15    |IBUF    |    10|
+|16    |OBUF    |    20|
 +------+--------+------+
 
 Report Instance Areas: 
 +------+-------------------------+---------------------+------+
 |      |Instance                 |Module               |Cells |
 +------+-------------------------+---------------------+------+
-|1     |top                      |                     |   666|
+|1     |top                      |                     |   647|
 |2     |  adder_db               |debouncer            |    66|
-|3     |  enter_db               |debouncer_0          |    66|
-|4     |  keypad_input           |keypad_decoder       |    21|
-|5     |  keypad_number_creation |keypad_input_handler |   146|
+|3     |  enter_db               |debouncer_0          |    67|
+|4     |  keypad_input           |keypad_decoder       |    25|
+|5     |  keypad_number_creation |keypad_input_handler |   119|
 |6     |  mult_db                |debouncer_1          |    66|
-|7     |  operations             |operation_handler    |    59|
+|7     |  operations             |operation_handler    |    60|
 |8     |  reset_db               |debouncer_2          |    67|
 |9     |  sseg_display           |seven_seg_ctrl       |    30|
-|10    |  sseg_output_handler    |output_handler       |    29|
-|11    |  subtractor_db          |debouncer_3          |    85|
+|10    |  sseg_output_handler    |output_handler       |    30|
+|11    |  subtractor_db          |debouncer_3          |    86|
 +------+-------------------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 844.488 ; gain = 223.383
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.488 ; gain = 558.352
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 840.797 ; gain = 219.684
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 840.797 ; gain = 555.105
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 840.797 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 33 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 844.488 ; gain = 570.996
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.488 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 840.797 ; gain = 568.098
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 840.797 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file calculator_top_module_utilization_synth.rpt -pb calculator_top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr  4 23:57:33 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  5 00:11:24 2021...

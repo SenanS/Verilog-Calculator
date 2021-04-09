@@ -4,7 +4,7 @@
 module keypad_input_handler(
     input               clk, reset, enter_btn,
     input [3:0]         input_number,
-    output reg          finished, stuck_on_input,
+    output reg          finished, stuck_on_input, second_num_bool,
     output reg [15:0]   first_num, second_num
     );
     
@@ -47,13 +47,14 @@ module keypad_input_handler(
     reg [15:0] first_ff = 0, second_ff = 0, first_nxt = 0, second_nxt = 0;
     reg [1:0] main_state_ff, main_state_nxt; 
     reg [7:0] sub_state_ff = 0, sub_state_nxt = 0;
-    reg finished_ff = 0, finished_nxt = 0, stuck_on_ff, stuck_on_nxt;
+    reg finished_ff = 0, finished_nxt = 0, stuck_on_ff, stuck_on_nxt, second_bool_ff, second_bool_nxt;
     
 //    Assigning outputs 
     assign stuck_on_input = stuck_on_ff;
     assign finished = finished_ff;
     assign first_num = first_ff;
     assign second_num = second_ff;
+    assign second_num_bool = second_bool_ff;
     
 //    Reset & update logic
     always @(posedge clk or posedge reset) begin
@@ -64,6 +65,7 @@ module keypad_input_handler(
             first_ff <= 0;
             second_ff <= 0;
             stuck_on_ff <= 0;
+            second_bool_ff <= 0;
         end else begin
             main_state_ff <= main_state_nxt;
             sub_state_ff <= sub_state_nxt;
@@ -71,6 +73,7 @@ module keypad_input_handler(
             first_ff <= first_nxt;
             second_ff <= second_nxt;
             stuck_on_ff <= stuck_on_nxt;
+            second_bool_ff <= second_bool_nxt;
         end
     end
     
@@ -80,7 +83,7 @@ module keypad_input_handler(
         sub_state_ff <= sub_state_1;
         first_ff <= 0;
         second_ff <= 0;
-        
+        second_bool_ff <= 0;
     end
     
     always @(*) begin
@@ -91,20 +94,21 @@ module keypad_input_handler(
         first_nxt = first_ff;
         stuck_on_nxt = stuck_on_ff;
         finished_nxt = finished_ff;
+        second_bool_nxt = second_bool_ff;
         case(main_state_ff)
             main_state_1: begin
                 finished_nxt = 0;
+                second_bool_nxt = 0;
                 case(sub_state_ff)
                     sub_state_1: begin
                         if(enter_btn)
                             sub_state_nxt = sub_state_2;
                         first_nxt[3:0] = input_number;
-                        finished_nxt = 0;
                         stuck_on_nxt = 0;
                     end
                     sub_state_2: begin
                         stuck_on_nxt = 1;
-                        if(first_nxt[3:0] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_3;
                     end
@@ -115,7 +119,7 @@ module keypad_input_handler(
                     end
                     sub_state_4: begin
                         stuck_on_nxt = 1;
-                        if(first_nxt[7:4] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_5;
                     end
@@ -126,7 +130,7 @@ module keypad_input_handler(
                     end
                     sub_state_6: begin
                         stuck_on_nxt = 1;
-                        if(first_nxt[11:8] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_7;
                     end
@@ -138,6 +142,7 @@ module keypad_input_handler(
                     sub_state_8: begin
                         main_state_nxt = main_state_2;
                         sub_state_nxt = sub_state_1;
+                        second_bool_nxt = 1;
                     end
                 endcase
             end
@@ -152,7 +157,7 @@ module keypad_input_handler(
                     end
                     sub_state_2: begin
                         stuck_on_nxt = 1;
-                        if(second_nxt[3:0] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_3;
                     end
@@ -163,7 +168,7 @@ module keypad_input_handler(
                     end
                     sub_state_4: begin
                         stuck_on_nxt = 1;
-                        if(second_nxt[7:4] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_5;
                     end
@@ -174,7 +179,7 @@ module keypad_input_handler(
                     end
                     sub_state_6: begin
                         stuck_on_nxt = 1;
-                        if(second_nxt[11:8] != input_number)
+                        if(!enter_btn)
                             stuck_on_nxt = 0;
                             sub_state_nxt = sub_state_7;
                     end

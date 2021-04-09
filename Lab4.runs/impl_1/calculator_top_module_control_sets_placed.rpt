@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sun Apr  4 23:58:02 2021
+| Date         : Mon Apr  5 00:11:53 2021
 | Host         : Senans-PC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file calculator_top_module_control_sets_placed.rpt
 | Design       : calculator_top_module
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    19 |
-| Unused register locations in slices containing registers |    66 |
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    65 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,9 +35,11 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      4 |            9 |
+|      5 |            1 |
 |      8 |            1 |
+|     12 |            1 |
 |     15 |            1 |
-|    16+ |            8 |
+|    16+ |            7 |
 +--------+--------------+
 
 
@@ -48,39 +50,40 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              15 |           12 |
-| No           | No                    | Yes                    |              41 |           14 |
+| No           | No                    | Yes                    |              42 |           14 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             122 |           36 |
-| Yes          | No                    | Yes                    |              60 |           17 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             117 |           35 |
+| Yes          | No                    | Yes                    |              60 |           16 |
+| Yes          | Yes                   | No                     |               5 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+----------------------------------------------+-----------------------+------------------+----------------+
-|  Clock Signal  |                 Enable Signal                |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+----------------+----------------------------------------------+-----------------------+------------------+----------------+
-|  clk_IBUF_BUFG | keypad_input/number_nxt_inferred__0/i__n_0   | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/second_ff[15]_i_1_n_0 | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/first_ff[7]_i_1_n_0   | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/second_ff[11]_i_1_n_0 | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/second_ff[7]_i_1_n_0  | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/second_ff[3]_i_1_n_0  | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/first_ff[11]_i_1_n_0  | reset_db/reset_btn_db |                2 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/first_ff[15]_i_1_n_0  | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/first_ff[3]_i_1_n_0   | reset_db/reset_btn_db |                1 |              4 |
-|  clk_IBUF_BUFG | keypad_number_creation/sub_state_nxt         | reset_db/reset_btn_db |                3 |              8 |
-|  clk_IBUF_BUFG |                                              |                       |               12 |             15 |
-|  clk_IBUF_BUFG | keypad_number_creation/E[0]                  | reset_db/reset_btn_db |                4 |             16 |
-|  clk_IBUF_BUFG | operations/E[0]                              |                       |                6 |             17 |
-|  clk_IBUF_BUFG | adder_db/count_reg[0]_i_1__0_n_0             |                       |                6 |             21 |
-|  clk_IBUF_BUFG | enter_db/count_reg[0]_i_1__1_n_0             |                       |                6 |             21 |
-|  clk_IBUF_BUFG | mult_db/count_reg[0]_i_1__3_n_0              |                       |                6 |             21 |
-|  clk_IBUF_BUFG | reset_db/count_reg[0]_i_1__2_n_0             |                       |                6 |             21 |
-|  clk_IBUF_BUFG | subtractor_db/count_reg[0]_i_1_n_0           |                       |                6 |             21 |
-|  clk_IBUF_BUFG |                                              | reset_db/reset_btn_db |               14 |             41 |
-+----------------+----------------------------------------------+-----------------------+------------------+----------------+
++----------------+----------------------------------------------+----------------------------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                |            Set/Reset Signal            | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------------+----------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | keypad_input/number_nxt_inferred__0/i__n_0   | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/first_ff[11]_i_1_n_0  | reset_db/reset_btn_db                  |                2 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/second_ff[11]_i_1_n_0 | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/first_ff[15]_i_1_n_0  | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/first_ff[7]_i_1_n_0   | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/second_ff[15]_i_1_n_0 | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/second_ff[7]_i_1_n_0  | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/second_ff[3]_i_1_n_0  | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | keypad_number_creation/first_ff[3]_i_1_n_0   | reset_db/reset_btn_db                  |                1 |              4 |
+|  clk_IBUF_BUFG | operations/indicators_reg[1]_0               | sseg_output_handler/result[16]_i_1_n_0 |                1 |              5 |
+|  clk_IBUF_BUFG | keypad_number_creation/sub_state_nxt         | reset_db/reset_btn_db                  |                2 |              8 |
+|  clk_IBUF_BUFG | operations/indicators_reg[1]_0               |                                        |                5 |             12 |
+|  clk_IBUF_BUFG |                                              |                                        |               12 |             15 |
+|  clk_IBUF_BUFG | subtractor_db/E[0]                           | reset_db/reset_btn_db                  |                4 |             16 |
+|  clk_IBUF_BUFG | adder_db/count_reg[0]_i_1__0_n_0             |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | enter_db/count_reg[0]_i_1__1_n_0             |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | mult_db/count_reg[0]_i_1__3_n_0              |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | reset_db/count_reg[0]_i_1__2_n_0             |                                        |                6 |             21 |
+|  clk_IBUF_BUFG | subtractor_db/count_reg[0]_i_1_n_0           |                                        |                6 |             21 |
+|  clk_IBUF_BUFG |                                              | reset_db/reset_btn_db                  |               14 |             42 |
++----------------+----------------------------------------------+----------------------------------------+------------------+----------------+
 
 

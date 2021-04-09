@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Apr  4 23:57:05 2021
-# Process ID: 1580
+# Start of session at: Mon Apr  5 00:10:57 2021
+# Process ID: 8144
 # Current directory: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1
 # Command line: vivado.exe -log calculator_top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top_module.tcl
 # Log file: X:/Life/Collages/Year5-MAI/5C1/Lab4/Lab4.runs/synth_1/calculator_top_module.vds

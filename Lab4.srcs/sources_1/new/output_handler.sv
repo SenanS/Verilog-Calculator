@@ -3,7 +3,7 @@
 
 module output_handler(
     input               clk, reset,
-    input               complete_input, enter_btn, stuck_on_input,
+    input               complete_input, enter_btn, stuck_on_input, second_num_bool,
     input [3:0]         operation,
     input [15:0]        first_num, second_num, op_result,
     output reg [16:0]   result
@@ -46,7 +46,7 @@ module output_handler(
 //        Reset state to show the first number
         if(reset)
             next_state <= 0;            
-        if(enter_btn)
+        if(second_num_bool)
             next_state <= 1;
 
 //       Show the description of the operation IF there's an operation in progress

@@ -14,7 +14,7 @@ module calculator_top_module(
     
 //                          INTERAL WIRING
 //    Variables to debounce the buttons 
-    wire reset_btn_db, enter_btn_db, sub_btn_db, add_btn_db, mult_btn_db, complete_input, stuck_on_input;
+    wire reset_btn_db, enter_btn_db, sub_btn_db, add_btn_db, mult_btn_db, complete_input, stuck_on_input, second_num_bool;
 //    Single keypad number
     wire[3:0] keypad_num;
 //    Arrays to represent input numbers and output number
@@ -43,7 +43,7 @@ module calculator_top_module(
     keypad_input_handler keypad_number_creation
         (.clk(clk), .reset(reset_btn_db), .enter_btn(enter_btn_db), .input_number(keypad_num),
         .finished(complete_input), .first_num(first_num), .second_num(second_num),        
-        .stuck_on_input(stuck_on_input));      
+        .stuck_on_input(stuck_on_input), .second_num_bool(second_num_bool));      
                                                
 //Takes two inputs from switches and outputs them as two arrays
 //    input_handler number_in_module
@@ -63,7 +63,7 @@ module calculator_top_module(
     output_handler sseg_output_handler        
         (.clk(clk), .reset(reset_btn_db), .complete_input(complete_input), .enter_btn(enter_btn_db), 
         .first_num(first_num), .second_num(second_num), .op_result(output_num), .result(buffer_num),
-        .operation(LED[3:0]), .stuck_on_input(stuck_on_input));
+        .operation(LED[3:0]), .stuck_on_input(stuck_on_input), .second_num_bool(second_num_bool));
         
         
 //    assign buffer_num = {{1'b0}, {4{keypad_num}}};
